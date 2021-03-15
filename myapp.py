@@ -1,7 +1,7 @@
 import random
 import os
 import time
-
+from googlesearch import search 
 x = 1
 print("Type 'help' for more info")
 """
@@ -19,6 +19,29 @@ if bash == "root":
 	else:
 		print("Access Denied")
 """
+def google():
+	query = input("What do you want to search for in Google?:")
+	for i in search(query, tld="co.in", stop=10):
+		print(i)
+def helptext():
+	print("Here are the commands:-")
+	time.sleep(0.5)
+	print("help   -  Type this command for help")
+	time.sleep(0.5)
+	print("Hi     -  Type this command for salutation")
+	time.sleep(0.5)
+	print("clear  -  Type this command for clearing the screen")
+	time.sleep(0.5)
+	print("notepad - To open notepad")
+	time.sleep(0.5)
+	print("python - To open Python3")
+	time.sleep(0.5)
+	print("ls     -  List directory")
+	time.sleep(0.5)
+	print("shutdown - To shutdown the computer")
+	time.sleep(0.5)
+	print("reboot -  Reboot the Computer")
+	time.sleep(0.5)
 
 while x == 1:
 	bash = input("betterthan@bash:>")
@@ -30,24 +53,7 @@ while x == 1:
 	elif bash == "Hi":
 		print(random.choice(salutation))
 	elif bash == "help":
-		print("Here are the commands:-")
-		time.sleep(0.5)
-		print("help   -  Type this command for help")
-		time.sleep(0.5)
-		print("Hi     -  Type this command for salutation")
-		time.sleep(0.5)
-		print("clear  -  Type this command for clearing the screen")
-		time.sleep(0.5)
-		print("notepad - To open notepad")
-		time.sleep(0.5)
-		print("python - To open Python3")
-		time.sleep(0.5)
-		print("ls     -  List directory")
-		time.sleep(0.5)
-		print("shutdown - To shutdown the computer")
-		time.sleep(0.5)
-		print("reboot -  Reboot the Computer")
-		time.sleep(0.5)
+		helptext()
 	elif bash == "clear":
 		os.system("cls")
 	elif bash == "notepad":
@@ -79,6 +85,8 @@ while x == 1:
 		time.sleep(2)
 		print("Reboot")
 		os.system("shutdown /r /t 1")
-
+	elif bash == "googlesearch":
+		google()
+			
 	else:
 		print("No command" + "-: " + bash + ":" + " found")
