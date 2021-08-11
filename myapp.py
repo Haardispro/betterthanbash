@@ -157,8 +157,6 @@ while x == 1:
 		time.sleep(2)
 		print("Reboot")
 		os.system("shutdown /r /t 1")
-	elif bash == "bash":
-		os.system("bash")
 	elif bash == "google":
 		print("Google services are not yet developed in this program")
 	#Music Section
