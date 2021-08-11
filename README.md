@@ -1,5 +1,6 @@
 # betterthanbash
-This is an app that replicates different command line interfaces like Command Prompt and Bash
+This is an app that replicates different command line interfaces like Command Prompt and Bash.
+<br>
 This is made for Windows.
 <br>
 It also has cool stuff like in built music player
